@@ -1,0 +1,10 @@
+micro_wake_word:
+  id: mww
+  models:
+    - id: !remove okay_nabu
+    - id: !remove hey_mycroft
+    - id: !remove hey_jarvis
+    - id: Asmodeus
+      model:
+        type: local
+        path: /ESPhome/wakewords/asmodeus.json
