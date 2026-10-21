@@ -1,6 +1,8 @@
 This is what everyone has been waiting for: A working MWW trainer notebook using the newer build of Tatertotterson's MWW model generator. 
 
-The model I am using can be found at: https://github.com/TaterTotterson/microWakeWords
+This training notebook is currently working as of 10/21/2026.
+
+The base model I am using can be found at: https://github.com/TaterTotterson/microWakeWords, but this version is designed to be run within a notebook rather than locally with a web GUI.
 
 To use this model generator:
 1. Download the notebook file from this git
