@@ -1,0 +1,12 @@
+micro_wake_word:
+  id: mww
+  models:
+    - id: !remove okay_nabu
+    - id: !remove hey_mycroft
+    - id: !remove hey_jarvis
+    - id: Asmodeus
+      model: https://github.com/Rogusliv/RogusMWW/raw/main/asmodeus.json
+    - id: Beelzebub
+      model: https://github.com/Rogusliv/RogusMWW/raw/main/beelzebub.json
+    - id: Lucifer
+      model: https://github.com/Rogusliv/RogusMWW/raw/main/lucifer.json  
