@@ -15,9 +15,21 @@ Some tips on using self recorded audio-files in order to improve sensitivity to 
 3. These should be saved in the following format: .wav 16k mono
 
 
-Using the output in ESPHome using github:
+Using the output file in ESPHome using github:
 1. You need both output files the .json and the .tflite. The model outputs 2 .json one that has tater on the front and one without. For this you are going to use the one without.
-2. You want to then upload it to a github. My personal repo for the ones I have generated is: https://github.com/Rogusliv/RogusMWW . Feel free to add to if you want the files to be publicly available. 
-3. On the ESPHome editor, add the following block:
-     
-How to incorporate the files into your smart home if using ESPHome satelites:
+2. You want to then upload it to a github. You should upload both the .tflite and the .json.
+
+   My personal repo for the ones I have generated is: https://github.com/Rogusliv/RogusMWW . Feel free to add to if you want the files to be publicly available. I will publish it to the repo.
+   
+3. On the ESPHome editor, add the following block: ESPHome_github_block.yaml
+4. If you want to keep the default wake words remove: !replace
+5. Edit the path to show the url of the .json of the wake word you want to use. (this should be the RAW url)
+6. This should compile. I was not able to get the built in git to work using their GUI, but the manual worked well.
+
+Using the output file in ESPHome using a local file:
+1. Create a file in your machine that is visible to the ESPHome system. If you are using docker make sure it is mounted.
+2. You want to use the .json without the tater prefix on the name. Drop in your .json and .tflite.
+3. Edit the .json to point to your .tflite file in the new location.
+4. Drop in the ESPHome_Local_block.yaml" into the config yaml
+5. If you want to keep the base wake words, delete the !replace command.
+6. Edit the file so the path matches the .json. Be sure to use relative pathing if running in docker.
